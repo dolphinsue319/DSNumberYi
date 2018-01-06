@@ -21,16 +21,46 @@ class DSNumberYiTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testRemoves5InMiddle() {
+        XCTAssertEqual("13", "153".remove5InMiddle())
+        XCTAssertEqual("13", "15555553".remove5InMiddle())
+        XCTAssertEqual("1234678", "1525354565758".remove5InMiddle())
+        XCTAssertEqual("135", "135".remove5InMiddle())
+        XCTAssertEqual("535", "535".remove5InMiddle())
+        XCTAssertEqual("55", "555".remove5InMiddle())
+        XCTAssertEqual("55", "5555".remove5InMiddle())
+        XCTAssertEqual("1", "1".remove5InMiddle())
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testTwoDigitsStringArray() {
+        XCTAssertEqual(["13"], "13".twoDigitsStringArray()!)
+        XCTAssertEqual(["13", "35"], "135".twoDigitsStringArray()!)
+        XCTAssertEqual(["13", "35", "57"], "1357".twoDigitsStringArray()!)
+        XCTAssertNil("2".twoDigitsStringArray())
+    }
+    
+    func testSymbolsFromString() {
+        XCTAssertEqual(["天醫"], "13".symbols()!)
+        XCTAssertEqual(["天醫", "延年"], "1534".symbols()!)
+        XCTAssertEqual(["天醫", "延年"], "15354".symbols()!)
+        XCTAssertEqual(["天醫", "延年", "伏位"], "153544".symbols()!)
+        XCTAssertEqual(["天醫", "延年", "伏位"], "153545".symbols()!)
+        XCTAssertEqual(["伏位", "天醫", "延年", "伏位"], "5153545".symbols()!)
+    }
+    
+    func testSymbolsFromInt() {
+        XCTAssertEqual(["天醫"], 13.symbols()!)
+        XCTAssertEqual(["天醫", "延年"], 1534.symbols()!)
+        XCTAssertEqual(["天醫", "延年"], 15354.symbols()!)
+        XCTAssertEqual(["天醫", "延年", "伏位"], 153544.symbols()!)
+        XCTAssertEqual(["天醫", "延年", "伏位"], 153545.symbols()!)
+        XCTAssertEqual(["伏位", "天醫", "延年", "伏位"], 5153545.symbols()!)
+    }
+    
+    func testAllTwoDigitNumberString() {
+        for number in 10...99 {
+            let string = String(number)
+            XCTAssertNotNil(string.symbols())
         }
     }
-    
 }

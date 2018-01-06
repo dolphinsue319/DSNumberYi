@@ -10,6 +10,8 @@
 		CE4E04A12000E04100D398C8 /* DSNumberYi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4E04972000E04000D398C8 /* DSNumberYi.framework */; };
 		CE4E04A62000E04100D398C8 /* DSNumberYiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E04A52000E04100D398C8 /* DSNumberYiTests.swift */; };
 		CE4E04A82000E04100D398C8 /* DSNumberYi.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4E049A2000E04000D398C8 /* DSNumberYi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE4E04B32000E06500D398C8 /* DSNumberYi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E04B22000E06500D398C8 /* DSNumberYi.swift */; };
+		CE4E04B42000E06500D398C8 /* DSNumberYi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E04B22000E06500D398C8 /* DSNumberYi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		CE4E04A02000E04100D398C8 /* DSNumberYiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSNumberYiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4E04A52000E04100D398C8 /* DSNumberYiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNumberYiTests.swift; sourceTree = "<group>"; };
 		CE4E04A72000E04100D398C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE4E04B22000E06500D398C8 /* DSNumberYi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNumberYi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 		CE4E048D2000E04000D398C8 = {
 			isa = PBXGroup;
 			children = (
+				CE4E04B12000E04F00D398C8 /* Sources */,
 				CE4E04992000E04000D398C8 /* DSNumberYi */,
 				CE4E04A42000E04100D398C8 /* DSNumberYiTests */,
 				CE4E04982000E04000D398C8 /* Products */,
@@ -84,6 +88,14 @@
 				CE4E04A72000E04100D398C8 /* Info.plist */,
 			);
 			path = DSNumberYiTests;
+			sourceTree = "<group>";
+		};
+		CE4E04B12000E04F00D398C8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E04B22000E06500D398C8 /* DSNumberYi.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					CE4E04962000E04000D398C8 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					CE4E049F2000E04100D398C8 = {
@@ -196,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4E04B32000E06500D398C8 /* DSNumberYi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4E04A62000E04100D398C8 /* DSNumberYiTests.swift in Sources */,
+				CE4E04B42000E06500D398C8 /* DSNumberYi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +349,7 @@
 		CE4E04AC2000E04100D398C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = idv.dolphinsu.DSNumberYi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +371,7 @@
 		CE4E04AD2000E04100D398C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +392,7 @@
 		CE4E04AF2000E04100D398C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DSNumberYiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +406,7 @@
 		CE4E04B02000E04100D398C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DSNumberYiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
