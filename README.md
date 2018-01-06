@@ -1,0 +1,1 @@
+This project is a swift library, this is for parsing a number to Yi-Jing.
